@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#7666d8"><meta name="description" content="پلنر شخصی فارسی با تقویم شمسی، کارها، گزارش و یادداشت">
+
+<title>پلنر من</title><style>
+:root{--accent:#7666d8;--bg:#f6f5fb;--surface:#fff;--ink:#28263a;--muted:#88869a;--line:#eeedf4;--soft:#f0edff;--shadow:0 10px 30px #30265d0c;font-family:Tahoma,Arial,sans-serif;font-size:16px}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font,Tahoma,Arial,sans-serif);font-size:var(--fs,16px);min-height:100vh}.top,main,footer{width:min(760px,100% - 30px);margin:auto}.top{display:flex;align-items:center;justify-content:space-between;padding:26px 0 18px}.top h1{margin:5px 0;font-size:25px}.top h1 span{color:var(--accent)}.eyebrow{font-size:11px;color:var(--muted);letter-spacing:.2px}.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.welcome{padding:22px 24px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(120deg,var(--surface),var(--soft))}.welcome h2{font-size:19px;margin:8px 0}.welcome p,.muted{color:var(--muted);font-size:12px}.sun{font-size:42px}.tabs{display:flex;gap:6px;overflow:auto;padding:18px 0 12px;position:sticky;top:0;background:var(--bg);z-index:3}.tab,.filter,.choice{border:0;background:transparent;color:var(--muted);padding:10px 13px;border-radius:12px;white-space:nowrap;font:inherit;font-size:12px;cursor:pointer}.tab.active,.filter.active,.choice.active{background:var(--soft);color:var(--accent);font-weight:bold}.panel{display:none;padding:10px 0 25px}.panel.active{display:block}.section-head{display:flex;align-items:center;justify-content:space-between;margin:15px 0 18px}.section-head h2{font-size:20px;margin:5px 0}.month-nav{display:flex;align-items:center;gap:12px;font-size:13px}.month-nav button{border:0;background:var(--surface);color:var(--accent);width:30px;height:30px;border-radius:10px;font-size:19px;cursor:pointer}.weekdays,.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;text-align:center}.weekdays{color:var(--muted);font-size:11px;margin-bottom:8px}.calendar-grid button{border:0;background:transparent;color:var(--ink);height:43px;border-radius:13px;font:inherit;cursor:pointer;position:relative}.calendar-grid button.muted-day{opacity:.25}.calendar-grid button.today{outline:1px solid var(--accent)}.calendar-grid button.selected{background:var(--accent);color:white}.calendar-grid button.has-task:after{content:"";position:absolute;width:4px;height:4px;border-radius:50%;background:var(--accent);bottom:4px;left:calc(50% - 2px)}.calendar-grid button.selected.has-task:after{background:white}.selected-date{display:flex;justify-content:space-between;align-items:center;margin:22px 0 10px;padding-top:17px;border-top:1px solid var(--line)}.selected-date h3{font-size:14px;margin:5px 0}.primary{border:0;border-radius:12px;background:var(--accent);color:white;padding:12px 16px;font:inherit;font-size:12px;cursor:pointer}.primary.small{padding:9px 12px}.task-list{display:grid;gap:8px}.task-item{display:flex;align-items:center;gap:10px;padding:13px;background:var(--surface);border:1px solid var(--line);border-radius:14px}.task-item input{accent-color:var(--accent);width:18px;height:18px}.task-item .task-text{flex:1;font-size:13px}.task-item.done .task-text{text-decoration:line-through;color:var(--muted)}.task-date{font-size:10px;color:var(--muted)}.delete{border:0;background:transparent;color:#c47b87;font-size:18px;cursor:pointer}.empty{text-align:center;color:var(--muted);font-size:12px;padding:22px}.add-form{display:flex;gap:8px;margin-bottom:15px}.add-form input{min-width:0;flex:1}input,textarea,select{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit;font-size:12px;outline-color:var(--accent)}input[type=date]{max-width:145px}.filters{display:flex;gap:5px;margin-bottom:12px}.count{font-size:11px;color:var(--muted)}#reportPeriod{max-width:110px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.stat{background:var(--surface);border:1px solid var(--line);border-radius:17px;padding:17px 12px}.stat span{display:block;color:var(--muted);font-size:11px}.stat strong{display:block;font-size:24px;margin-top:9px}.progress-card{padding:18px;margin-top:13px}.progress-head{display:flex;justify-content:space-between;font-size:13px}.progress{height:9px;background:var(--soft);border-radius:20px;margin:14px 0;overflow:hidden}.progress i{display:block;width:0;height:100%;background:var(--accent);border-radius:20px;transition:width .3s}.progress-card p{font-size:11px;color:var(--muted)}.note-form{display:grid;gap:9px;margin-bottom:15px}.note-form textarea{resize:vertical}.note-card{padding:15px;background:var(--surface);border:1px solid var(--line);border-radius:15px;margin-bottom:8px}.note-card h3{font-size:14px;margin:0 0 8px}.note-card p{white-space:pre-wrap;font-size:12px;line-height:1.9;margin:0}.note-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:10px;margin-top:10px}.setting{padding:18px}.setting h3{font-size:13px;margin:15px 0 10px}.swatches{display:flex;gap:10px}.swatches button{width:32px;height:32px;border-radius:50%;border:3px solid var(--surface);outline:1px solid var(--line);background:var(--swatch)}.choice-row{display:flex;gap:8px}.setting select{width:100%}.setting input[type=range]{width:100%;accent-color:var(--accent)}footer{text-align:center;color:var(--muted);font-size:10px;padding:10px 0 28px}.install{background:var(--accent);color:white;border:0;border-radius:10px;padding:9px 12px;font:inherit;font-size:11px}.hidden{display:none!important}dialog{border:0;border-radius:20px;padding:22px;background:var(--surface);color:var(--ink);width:min(360px,calc(100% - 30px));box-shadow:0 20px 80px #0003}dialog::backdrop{background:#17132988}dialog form{display:grid;gap:12px}dialog h3{margin:0 0 5px}.dialog-actions{display:flex;justify-content:flex-end;gap:8px}.dark{--bg:#171624;--surface:#242235;--ink:#f1effb;--muted:#aaa6bf;--line:#39364d;--soft:#35304f;--shadow:0 10px 30px #0002}@media(max-width:520px){.top,main,footer{width:calc(100% - 24px)}.top{padding-top:20px}.tab{padding:9px 11px}.welcome{padding:18px}.add-form{flex-wrap:wrap}.add-form input:first-child{flex-basis:100%}.add-form input[type=date]{flex:1;max-width:none}.calendar-grid button{height:40px}.stats{gap:6px}.stat{padding:13px 9px}.stat strong{font-size:21px}}
+</style>
+</head>
+<body>
+<header class="top"><div><div class="eyebrow">فضای شخصی تو</div><h1>پلنر من <span>✦</span></h1></div><button id="installBtn" class="install hidden">نصب برنامه ⤓</button></header>
+<main>
+<section class="welcome card"><div><div class="eyebrow">امروز، یک شروع تازه</div><h2 id="todayLabel">در حال بارگذاری تقویم…</h2><p id="todayHint">قدم‌های کوچک، نتیجه‌های بزرگ می‌سازند.</p></div><div class="sun">☀️</div></section>
+<nav class="tabs" aria-label="بخش‌ها">
+<button class="tab active" data-tab="calendar">تقویم</button><button class="tab" data-tab="tasks">کارها</button><button class="tab" data-tab="reports">گزارش‌ها</button><button class="tab" data-tab="notes">یادداشت</button><button class="tab" data-tab="settings">تنظیمات</button>
+</nav>
+<section id="calendar" class="panel active">
+<div class="section-head"><div><div class="eyebrow">برنامه‌ریزی</div><h2>تقویم شمسی</h2></div><div class="month-nav"><button id="prevMonth" aria-label="ماه قبل">›</button><strong id="monthTitle"></strong><button id="nextMonth" aria-label="ماه بعد">‹</button></div></div>
+<div class="weekdays"><span>ش</span><span>ی</span><span>د</span><span>س</span><span>چ</span><span>پ</span><span>ج</span></div>
+<div id="calendarGrid" class="calendar-grid"></div>
+<div class="selected-date"><div><div class="eyebrow">برنامه این روز</div><h3 id="selectedTitle"></h3></div><button class="primary small" id="addTaskFromCalendar">+ افزودن کار</button></div>
+<div id="dayTasks" class="task-list"></div>
+</section>
+<section id="tasks" class="panel">
+<div class="section-head"><div><div class="eyebrow">قدم بعدی تو</div><h2>کارهای من</h2></div><span class="count" id="taskCount">۰ کار</span></div>
+<form id="taskForm" class="add-form"><input id="taskInput" placeholder="چه کاری باید انجام بدی؟" maxlength="100" required><input id="taskDate" type="date" aria-label="تاریخ کار"><button class="primary" type="submit">افزودن</button></form>
+<div class="filters"><button class="filter active" data-filter="all">همه</button><button class="filter" data-filter="open">باقی‌مانده</button><button class="filter" data-filter="done">انجام‌شده</button></div>
+<div id="allTasks" class="task-list"></div>
+</section>
+<section id="reports" class="panel">
+<div class="section-head"><div><div class="eyebrow">نگاهی به مسیرت</div><h2>گزارش عملکرد</h2></div><select id="reportPeriod"><option value="day">روزانه</option><option value="month">ماهانه</option></select></div>
+<div class="stats"><article class="stat"><span>کل کارها</span><strong id="totalStat">۰</strong></article><article class="stat"><span>انجام‌شده</span><strong id="doneStat">۰</strong></article><article class="stat"><span>درصد پیشرفت</span><strong id="percentStat">۰٪</strong></article></div>
+<div class="card progress-card"><div class="progress-head"><strong>پیشرفت تو</strong><span id="progressText">۰٪</span></div><div class="progress"><i id="progressBar"></i></div><p id="reportCaption">با انجام اولین کار، مسیر پیشرفتت شروع می‌شود.</p></div>
+</section>
+<section id="notes" class="panel">
+<div class="section-head"><div><div class="eyebrow">ایده‌ها و فکرها</div><h2>یادداشت‌های من</h2></div></div>
+<form id="noteForm" class="note-form"><input id="noteTitle" placeholder="عنوان یادداشت" maxlength="70"><textarea id="noteBody" placeholder="هر چیزی که دوست داری اینجا بنویس…" rows="4"></textarea><button class="primary" type="submit">ذخیره یادداشت</button></form>
+<div id="notesList" class="notes-list"></div>
+</section>
+<section id="settings" class="panel">
+<div class="section-head"><div><div class="eyebrow">شخصی‌سازی</div><h2>تنظیمات ظاهر</h2></div></div>
+<div class="card setting"><h3>رنگ برنامه</h3><div class="swatches"><button data-color="#7666d8" style="--swatch:#7666d8" aria-label="بنفش"></button><button data-color="#168b82" style="--swatch:#168b82" aria-label="سبزآبی"></button><button data-color="#d46d82" style="--swatch:#d46d82" aria-label="صورتی"></button><button data-color="#d18a36" style="--swatch:#d18a36" aria-label="نارنجی"></button><button data-color="#477bb5" style="--swatch:#477bb5" aria-label="آبی"></button></div>
+<h3>حالت نمایش</h3><div class="choice-row"><button class="choice active" data-theme="light">روشن</button><button class="choice" data-theme="dark">تیره</button></div>
+<h3>فونت</h3><select id="fontSelect"><option value="Tahoma">Tahoma</option><option value="Arial">Arial</option><option value="sans-serif">پیش‌فرض گوشی</option></select>
+<h3>اندازه نوشته</h3><input id="fontSize" type="range" min="14" max="19" value="16"><p class="muted">اطلاعاتت فقط در حافظه همین مرورگر ذخیره می‌شود.</p></div>
+</section>
+</main>
+<footer>با عشق برای روزهای پربارتر تو ✨</footer>
+<dialog id="taskDialog"><form method="dialog" id="quickTaskForm"><h3>کار جدید</h3><input id="quickTaskInput" placeholder="عنوان کار" required maxlength="100"><div class="dialog-actions"><button class="choice" value="cancel">انصراف</button><button class="primary" id="quickSave" value="default">ذخیره</button></div></form></dialog>
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const fa=new Intl.DateTimeFormat('fa-IR-u-ca-persian',{year:'numeric',month:'long',day:'numeric'});
+const parts=d=>{let o={};new Intl.DateTimeFormat('en-US-u-ca-persian',{year:'numeric',month:'numeric',day:'numeric'}).formatToParts(d).forEach(x=>{if(x.type!=='literal')o[x.type]=+x.value});return o};
+const key=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+const today=new Date();let selected=new Date(today),view=new Date(today),filter='all';
+let data=JSON.parse(localStorage.getItem('planner-data')||'{"tasks":[],"notes":[]}');
+function save(){localStorage.setItem('planner-data',JSON.stringify(data));render()}
+function firstOfPersianMonth(d){let x=new Date(d);while(parts(x).day!==1)x.setDate(x.getDate()-1);return x}
+function monthName(d){return new Intl.DateTimeFormat('fa-IR-u-ca-persian',{year:'numeric',month:'long'}).format(d)}
+function dateLabel(d){return fa.format(d)}
+function fmtKey(k){let d=new Date(k+'T12:00:00');return dateLabel(d)}
+function renderCalendar(){
+ const first=firstOfPersianMonth(view), start=new Date(first);let weekday=(start.getDay()+1)%7;start.setDate(start.getDate()-weekday);
+ $('#monthTitle').textContent=monthName(view);
+ const grid=$('#calendarGrid');grid.innerHTML='';
+ for(let i=0;i<42;i++){let d=new Date(start);d.setDate(start.getDate()+i);let p=parts(d),same=p.month===parts(view).month&&p.year===parts(view).year;let b=document.createElement('button');b.textContent=new Intl.NumberFormat('fa-IR').format(p.day);b.className=[!same?'muted-day':'',key(d)===key(today)?'today':'',key(d)===key(selected)?'selected':'',data.tasks.some(t=>t.date===key(d))?'has-task':''].join(' ');b.onclick=()=>{selected=d;render()};grid.append(b)}
+ $('#selectedTitle').textContent=dateLabel(selected);const list=data.tasks.filter(t=>t.date===key(selected));renderTaskList($('#dayTasks'),list,true);
+}
+function renderTaskList(el,list,compact=false){el.innerHTML='';if(!list.length){el.innerHTML='<div class="empty">هنوز کاری برای این بخش ثبت نشده 🌱</div>';return}
+ list.forEach(t=>{let row=document.createElement('div');row.className='task-item'+(t.done?' done':'');let cb=document.createElement('input');cb.type='checkbox';cb.checked=t.done;cb.onchange=()=>{t.done=cb.checked;save()};let txt=document.createElement('span');txt.className='task-text';txt.textContent=t.text;let date=document.createElement('span');date.className='task-date';date.textContent=compact?'':fmtKey(t.date);let del=document.createElement('button');del.className='delete';del.textContent='×';del.setAttribute('aria-label','حذف');del.onclick=()=>{data.tasks=data.tasks.filter(x=>x.id!==t.id);save()};row.append(cb,txt,date,del);el.append(row)})}
+function renderTasks(){let arr=data.tasks.filter(t=>filter==='all'||(filter==='done'?t.done:!t.done));renderTaskList($('#allTasks'),arr);$('#taskCount').textContent=new Intl.NumberFormat('fa-IR').format(data.tasks.length)+' کار'}
+function renderReports(){let mode=$('#reportPeriod').value;let arr=data.tasks.filter(t=>mode==='day'?t.date===key(selected):parts(new Date(t.date+'T12:00:00')).month===parts(view).month&&parts(new Date(t.date+'T12:00:00')).year===parts(view).year);let done=arr.filter(t=>t.done).length,p=arr.length?Math.round(done/arr.length*100):0;$('#totalStat').textContent=arr.length;$('#doneStat').textContent=done;$('#percentStat').textContent=p+'٪';$('#progressText').textContent=p+'٪';$('#progressBar').style.width=p+'%';$('#reportCaption').textContent=arr.length?`تا اینجا ${done} کار از ${arr.length} کار را به پایان رسانده‌ای. ادامه بده!`:'با انجام اولین کار، مسیر پیشرفتت شروع می‌شود.'}
+function renderNotes(){let el=$('#notesList');el.innerHTML='';if(!data.notes.length){el.innerHTML='<div class="empty">یادداشت‌هایت اینجا جمع می‌شوند ✍️</div>';return}data.notes.slice().reverse().forEach(n=>{let card=document.createElement('article');card.className='note-card';let h=document.createElement('h3');h.textContent=n.title||'یادداشت بدون عنوان';let p=document.createElement('p');p.textContent=n.body;let meta=document.createElement('div');meta.className='note-meta';let time=document.createElement('span');time.textContent=n.created;let del=document.createElement('button');del.className='delete';del.textContent='حذف';del.onclick=()=>{data.notes=data.notes.filter(x=>x.id!==n.id);save()};meta.append(time,del);card.append(h,p,meta);el.append(card)})}
+function render(){renderCalendar();renderTasks();renderReports();renderNotes()}
+$('#todayLabel').textContent=dateLabel(today);$('#taskDate').value=key(today);
+$$('.tab').forEach(b=>b.onclick=()=>{$$('.tab').forEach(x=>x.classList.toggle('active',x===b));$$('.panel').forEach(x=>x.classList.toggle('active',x.id===b.dataset.tab))});
+$('#prevMonth').onclick=()=>{view=new Date(firstOfPersianMonth(view));view.setDate(view.getDate()-1);render()};
+$('#nextMonth').onclick=()=>{view=new Date(firstOfPersianMonth(view));view.setDate(view.getDate()+35);view=firstOfPersianMonth(view);render()};
+function addTask(text,date){data.tasks.push({id:crypto.randomUUID(),text,date,done:false});save()}
+$('#taskForm').onsubmit=e=>{e.preventDefault();let text=$('#taskInput').value.trim();if(!text)return;addTask(text,$('#taskDate').value||key(today));$('#taskInput').value=''};
+$$('.filter').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;$$('.filter').forEach(x=>x.classList.toggle('active',x===b));renderTasks()});
+$('#reportPeriod').onchange=renderReports;
+$('#noteForm').onsubmit=e=>{e.preventDefault();let body=$('#noteBody').value.trim();if(!body)return;data.notes.push({id:crypto.randomUUID(),title:$('#noteTitle').value.trim(),body,created:dateLabel(new Date())});$('#noteTitle').value='';$('#noteBody').value='';save()};
+$('#addTaskFromCalendar').onclick=()=>{$('#quickTaskInput').value='';$('#taskDialog').showModal();$('#quickTaskInput').focus()};
+$('#quickTaskForm').onsubmit=e=>{e.preventDefault();let v=$('#quickTaskInput').value.trim();if(v)addTask(v,key(selected));$('#taskDialog').close()};
+$$('.swatches button').forEach(b=>b.onclick=()=>{document.documentElement.style.setProperty('--accent',b.dataset.color);localStorage.setItem('planner-color',b.dataset.color)});
+$$('.choice[data-theme]').forEach(b=>b.onclick=()=>{document.body.classList.toggle('dark',b.dataset.theme==='dark');$$('.choice[data-theme]').forEach(x=>x.classList.toggle('active',x===b));localStorage.setItem('planner-theme',b.dataset.theme)});
+$('#fontSelect').onchange=e=>{document.documentElement.style.setProperty('--font',e.target.value);localStorage.setItem('planner-font',e.target.value)};
+$('#fontSize').oninput=e=>{document.documentElement.style.setProperty('--fs',e.target.value+'px');localStorage.setItem('planner-size',e.target.value)};
+let color=localStorage.getItem('planner-color');if(color)document.documentElement.style.setProperty('--accent',color);
+let theme=localStorage.getItem('planner-theme')||'light';document.body.classList.toggle('dark',theme==='dark');$$('.choice[data-theme]').forEach(x=>x.classList.toggle('active',x.dataset.theme===theme));
+let font=localStorage.getItem('planner-font')||'Tahoma';$('#fontSelect').value=font;document.documentElement.style.setProperty('--font',font);
+let size=localStorage.getItem('planner-size')||'16';$('#fontSize').value=size;document.documentElement.style.setProperty('--fs',size+'px');
+render();
+
+let deferredPrompt;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;$('#installBtn').classList.remove('hidden')});
+$('#installBtn').onclick=async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;$('#installBtn').classList.add('hidden')};
+window.addEventListener('appinstalled',()=>$('#installBtn').classList.add('hidden'));
+
+</script>
+</body></html>
